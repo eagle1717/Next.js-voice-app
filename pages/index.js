@@ -12,7 +12,7 @@ export default function Home() {
   const sayText = () => {
     if (text && text.trim().length > 0) {
       axios
-        .post("http://localhost:3000/api/say", {
+        .post("api/say", {
           text,
         })
         .then(({ data }) => {
@@ -24,7 +24,7 @@ export default function Home() {
 
   const afterDownloadingFile = () => {
     axios
-      .delete("http://localhost:3000/api/say", {
+      .delete("api/say", {
         data: {
           text,
         },
